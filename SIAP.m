@@ -83,7 +83,8 @@ hold on
 plot(t,mIs, 'LineWidth', 3)
 plot(t,mAs, 'LineWidth', 3)
 plot(t,mPs, 'LineWidth', 3)
-
+xlabel('time');
+ylabel('Y(t)');
 legend('S', 'I', 'A','P');
 
 
