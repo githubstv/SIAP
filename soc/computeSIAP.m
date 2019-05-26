@@ -1,4 +1,4 @@
-expName = 'rand100';
+expName = 'random_100';
 tf = 2;
 facebookNetwotk = mmread(strcat(expName,'.mtx'));
 
