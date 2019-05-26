@@ -31,7 +31,7 @@ for i = 1: 19
     param = containers.Map();
     param('bettaS') = 0.2;
     param('bettaA') = 0.4;
-    param('k') = 0.95 - (i-1) * 0.05;
+    param('g') = 0.95 - (i-1) * 0.05;
     param('gamma') = 0.3;
     param('delta1') = 0.4;
     param('delta2') = 0.2;
@@ -39,7 +39,7 @@ for i = 1: 19
     answer = siapFunc(A, nodeNumber, param, initV, 0, tf);
 
    
-    fileName = strcat(expName, '_experiment_', strcat('k',num2str(0.95 - (i-1) * 0.05),'_'),'.mat');
+    fileName = strcat(expName, '_experiment_', strcat('g',num2str(0.95 - (i-1) * 0.05),'_'),'.mat');
     parsave(expName, fileName, answer, param, initV);
     
     disp(strcat(expName,' done :', int2str(i)))
