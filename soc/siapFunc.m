@@ -7,14 +7,14 @@ function [result, t] = siapFunc(A, n, param, initialV, t0, tf)
 
     bettaS = param('bettaS');
     bettaA = param('bettaA');
-    k = param('k');
+    g = param('g');
     gamma = param('gamma');
     delta1 = param('delta1');
     delta2 = param('delta2');
 
 
 
-    [stA, Adelta, A11, A12, A13] = generateMatrixStA(delta1,delta2, bettaA, bettaS, k ,gamma);
+    [stA, Adelta, A11, A12, A13] = generateMatrixStA(delta1,delta2, bettaA, bettaS, g ,gamma);
 
     [Q, Qdelta, Q11, Q12, Q13] = generateMatrixQ(Adelta, A11, A12, A13, states);
 
