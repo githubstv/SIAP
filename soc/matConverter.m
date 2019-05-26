@@ -6,7 +6,7 @@ function matConverter(expName)
     Experiment = [];
     bettaS = [];
     bettaA = [];
-    k = [];
+    g = [];
     gamma = [];
     delta1 = [];
     delta2 = [];
@@ -25,10 +25,10 @@ function matConverter(expName)
 
         load(Files(i).name)
 
-        Experiment = [Experiment; (0.95 - param('k'))/ 0.05 + 1];
+        Experiment = [Experiment; (0.95 - param('g'))/ 0.05 + 1];
         bettaS = [bettaS; param('bettaS')];
         bettaA = [bettaA; param('bettaA')];
-        k = [k; param('k')];
+        g = [g; param('g')];
         gamma = [gamma; param('gamma')];
         delta1 = [delta1; param('delta1')];
         delta2 = [delta2; param('delta2')];
@@ -51,7 +51,7 @@ function matConverter(expName)
         ylabel('Y(t)');
         legend('yS', 'yI', 'yA','yP');
 
-        figName = strcat(fileInfo{1}, '_', num2str((0.95 - param('k'))/ 0.05 + 1));
+        figName = strcat(fileInfo{1}, '_', num2str((0.95 - param('g'))/ 0.05 + 1));
         savefig(fig, figName);
 
 
@@ -70,7 +70,7 @@ function matConverter(expName)
 
     initP = [mean(lP(1,:))];
 
-    T = table(Experiment,bettaS,bettaA,k,gamma,delta1,delta2,S, I,A,P);
+    T = table(Experiment,bettaS,bettaA,g,gamma,delta1,delta2,S, I,A,P);
     initT = table(initS, initI, initA, initP);
 
     filename = strcat(fileInfo{1}, '_1.xlsx');

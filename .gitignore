@@ -1,2 +1,8 @@
 
 *.m~
+*.fig
+*.xlsx
+*.mat
+my_file.txt
+.DS_Store
+my_file.txt
