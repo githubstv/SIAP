@@ -22,14 +22,14 @@ fprintf(fid, 'States: %d.\n', states);
 
 bettaS = 0.2;
 bettaA = 0.4;
-k = 0.5;
+g = 0.5;
 gamma = 0.3;
 delta1 =0.4;
 delta2 = 0.3;
 
 fprintf(fid, 'bettaS: %.1f, ', bettaS);
 fprintf(fid, 'bettaA: %.1f, ', bettaA);
-fprintf(fid, 'k: %.1f, ', k);
+fprintf(fid, 'g: %.1f, ', g);
 fprintf(fid, 'gamma: %.1f, ', gamma);
 fprintf(fid, 'delta1: %.1f, ', delta1);
 fprintf(fid, 'delta2: %.1f.', delta2);
@@ -41,7 +41,7 @@ A = generateMatrixA(n, levels);
 
 
 
-[stA, Adelta, A11, A12, A13]=generateMatrixStA(delta1,delta2, bettaA, bettaS, k ,gamma);
+[stA, Adelta, A11, A12, A13]=generateMatrixStA(delta1,delta2, bettaA, bettaS, g ,gamma);
 
 [Q,Qdelta, Q11, Q12, Q13] = generateMatrixQ(Adelta, A11, A12, A13, states);
 
