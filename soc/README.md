@@ -46,7 +46,6 @@ param('delta2') = 0.4; -- интенсиовность (вероятность) 
 * socfb-Bowdoin47
 * socfb-Oberlin44
 * random_1k
-* rand041000
 * random_100
 
 
